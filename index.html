@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   KEFEMA Games Store
+  </title>
+  <style>
+   body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+    header {
+      background-color: #1565c0;
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }
+    header img {
+      height: 50px;
+      vertical-align: middle;
+      margin-right: 15px;
+    }
+    nav {
+      background-color: #1976d2;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 25px;
+    }
+    .intro, .product {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+    .product {
+      display: inline-block;
+      width: 250px;
+      background-color: white;
+      border: 1px solid #ccc;
+      margin: 15px;
+      vertical-align: top;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .product img {
+      max-width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .product-info {
+      padding: 10px;
+    }
+    .buy-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #0023f5;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .label-used {
+      position: absolute;
+      background-color: red;
+      color: white;
+      font-size: 0.8em;
+      padding: 4px;
+      border-radius: 4px;
+      top: 10px;
+      left: 10px;
+    }
+    .label-new {
+      position: absolute;
+      background-color: green;
+      color: white;
+      font-size: 0.8em;
+      padding: 4px;
+      border-radius: 4px;
+      top: 10px;
+      left: 10px;
+    }
+    .product img {
+      max-width: 200px;
+      border-radius: 8px;
+    }
+    .product-info {
+      max-width: 65%;
+    }
+    .price {
+      color: #c62828;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .used {
+      font-style: italic;
+      font-size: 0.9em;
+      color: #555;
+    }
+    h2.section-title {
+      color: #0d47a1;
+      border-bottom: 2px solid #1976d2;
+      padding-bottom: 5px;
+    }
+    footer {
+      background-color: #1565c0;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+   @media (max-width: 768px) {
+  .product {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+  }
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.buy-button:hover {
+  background-color: #0b0bb5;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body {
+  line-height: 1.6;
+}
+
+.product-info {
+  text-align: left;
+}
+
+.intro, .product {
+  background-color: #ffffff;
+  color: #000000;
+}
+   @media (max-width: 768px) {
+  .product {
+    width: 90% !important;
+    margin: 10px auto !important;
+    display: block !important;
+  }
+}
+
+nav {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+}
+
+.buy-button:hover {
+  background-color: #0b0bb5 !important;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3) !important;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+body {
+  line-height: 1.6 !important;
+  background-color: #e8f0fe !important;
+}
+
+.product-info {
+  text-align: left !important;
+}
+
+.intro, .product {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.section-title {
+  font-size: 1.5em !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+footer {
+  background-color: #0d47a1 !important;
+  color: #fff !important;
+  font-size: 0.95em !important;
+}
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    <img alt="Logo KEFEMA" src="https://image.similarpng.com/file/similarpng/original-picture/2021/08/Gaming-logo-design-template-on-transparent-background-PNG.png" style="height: 80px; margin-right: 15px; vertical-align: middle;"/>
+    KEFEMA Games Store
+   </h1>
+   <p>
+    Venta de consolas nuevas y usadas en Ecuador
+   </p>
+  </header>
+  <nav>
+   <a href="#">
+    Inicio
+   </a>
+   <a href="#">
+    Catálogo
+   </a>
+   <a href="#">
+    Ofertas
+   </a>
+   <a href="#">
+    Opiniones
+   </a>
+   <a href="#">
+    Contacto
+   </a>
+  </nav>
+  <section id="quienes-somos">
+   <h2 class="section-title">
+    <img src="https://cdn-icons-png.flaticon.com/128/7481/7481286.png" style="height: 30px; vertical-align: middle; margin-right: 10px;"/>
+    ¿Quiénes somos?
+   </h2>
+   <div class="intro">
+    <p>
+     Somos
+     <strong>
+      KEFEMA Games Store
+     </strong>
+     , una tienda online especializada en la venta de consolas de videojuegos, videojuegos retro y actuales, accesorios y más. Nuestro emprendimiento nació como un proyecto universitario con el objetivo de llevar tecnología y entretenimiento a todos los rincones del Ecuador.
+    </p>
+    <p>
+     Detrás de este proyecto estamos
+     <strong>
+      Mateo, Kevin y Felipe
+     </strong>
+     , tres apasionados por los videojuegos, la tecnología y la innovación digital. Comenzamos con un pequeño catálogo de consolas y hoy trabajamos para convertirnos en una de las tiendas gamers más reconocidas del país.
+    </p>
+    <p>
+     Gracias por ser parte de esta comunidad.
+    </p>
+   </div>
+  </section>
+  <section id="playstation">
+   <h2 class="section-title" style="color: #0033a0; border-bottom: 3px solid #0033a0; padding-bottom: 5px;">
+    <img src="https://download.logo.wine/logo/PlayStation/PlayStation-Logo.wine.png" style="height: 30px; vertical-align: middle; margin-right: 10px;"/>
+    Consolas PlayStation
+   </h2>
+   <!-- PS5 -->
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      PlayStation 5
+     </h3>
+     <p>
+      Consola de última generación con tecnología ultra rápida y gráficos realistas.
+     </p>
+     <p class="price">
+      Nueva: $699 | Usada: $599
+     </p>
+    </div>
+    <img alt="PS5" src="https://i5.walmartimages.com/seo/Sony-PlayStation-5-PS5-Gaming-Console-Disc-Version_a53802d8-7632-4530-8fc5-84b129845ee8.0a980f45d3e696c9661a6d23bcc0edc2.jpeg"/>
+   </div>
+   <!-- PS4 -->
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      PlayStation 4
+     </h3>
+     <p>
+      Gran biblioteca de juegos, perfecta para todo tipo de jugadores.
+     </p>
+     <p class="price">
+      Nueva: $449 | Usada: $349
+     </p>
+    </div>
+    <img alt="PS4" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/PS4-Console-wDS4.jpg"/>
+   </div>
+   <!-- PS3 -->
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      PlayStation 3
+     </h3>
+     <p>
+      Clásica consola HD retrocompatible con títulos legendarios.
+     </p>
+     <p class="price">
+      Nueva: $299 | Usada: $229
+     </p>
+    </div>
+    <img alt="PS3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Sony-PlayStation-3-2001A-wController-L.jpg/1200px-Sony-PlayStation-3-2001A-wController-L.jpg"/>
+   </div>
+   <!-- PS2 -->
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      PlayStation 2
+     </h3>
+     <p>
+      Consola más vendida de la historia. Imprescindible para coleccionistas.
+     </p>
+     <p class="price">
+      Usado: $199
+     </p>
+    </div>
+    <img alt="PS2" src="https://media.vandal.net/m/9-2024/4/2024941335514_1.jpg"/>
+   </div>
+   <!-- PS1 -->
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      PlayStation 1
+     </h3>
+     <p>
+      Clásica consola pionera en 3D, joya de la historia gamer.
+     </p>
+     <p class="price">
+      Usado: $149
+     </p>
+    </div>
+    <img alt="PS1" src="https://images-cdn.ubuy.ec/63545fe1df78461e445fc1f6-sony-playstation-1-ps1-console.jpg"/>
+   </div>
+  </section>
+  <section id="xbox">
+   <h2 class="section-title" style="color: #107C10; border-bottom: 3px solid #107C10; padding-bottom: 5px;">
+    <img src="https://1000marcas.net/wp-content/uploads/2020/03/logo-Xbox.png" style="height: 30px; vertical-align: middle; margin-right: 10px;"/>
+    Consolas Xbox
+   </h2>
+   <!-- Series X -->
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Xbox Series X
+     </h3>
+     <p>
+      La más potente de Microsoft, compatible con 4K y HDR.
+     </p>
+     <p class="price">
+      Nueva: $679 | Usada: $579
+     </p>
+    </div>
+    <img alt="Xbox Series X" src="https://cms-assets.xboxservices.com/assets/c5/30/c53042dc-6a60-43f7-b1ff-0b4e018edbbe.png?n=642227_Hero-Gallery-0_A4_857x676.png"/>
+   </div>
+   <!-- Series S -->
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Xbox Series S
+     </h3>
+     <p>
+      Compacta y accesible, ideal para juego digital en alta definición.
+     </p>
+     <p class="price">
+      Nueva: $449 | Usada: $349
+     </p>
+    </div>
+    <img alt="Xbox Series S" src="https://assets.xboxservices.com/assets/97/d3/97d3bf27-1a7d-4db6-85bc-929f2badf14e.png?n=389964_Buy-Box-0_857x676_01.png"/>
+   </div>
+   <!-- Xbox One -->
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Xbox One
+     </h3>
+     <p>
+      Consola con catálogo extenso y gran rendimiento multimedia.
+     </p>
+     <p class="price">
+      Nueva: $399 | Usada: $299
+     </p>
+    </div>
+    <img alt="Xbox One" src="https://http2.mlstatic.com/D_NQ_NP_980182-MLA52350579543_112022-O.webp"/>
+   </div>
+   <!-- Xbox 360 Slim -->
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Xbox 360 Slim
+     </h3>
+     <p>
+      Versión mejorada de la legendaria 360, con menor ruido y mayor fiabilidad.
+     </p>
+     <p class="price">
+      Nueva: $259 | Usada: $189
+     </p>
+    </div>
+    <img alt="Xbox 360 Slim" src="https://p.turbosquid.com/ts-thumb/A7/bXYrvu/FbIkaFzI/xbox_360_00/jpg/1517231369/600x600/fit_q87/3760a437c321e2881fe0575bc6cdaee9384195b5/xbox_360_00.jpg"/>
+   </div>
+   <!-- Xbox Original -->
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Xbox Clásica
+     </h3>
+     <p>
+      Primera consola de Microsoft, ideal para coleccionistas y retro.
+     </p>
+     <p class="price">
+      Usado: $139
+     </p>
+    </div>
+    <img alt="Xbox Classic" src="https://upload.wikimedia.org/wikipedia/commons/4/43/Xbox-console.jpg"/>
+   </div>
+  </section>
+  <section>
+   <h2 class="section-title" style="color: #E60012; border-bottom: 3px solid #E60012; padding-bottom: 5px;">
+    <img src="https://static.vecteezy.com/system/resources/previews/027/127/555/non_2x/nintendo-logo-nintendo-icon-transparent-free-png.png" style="height: 30px; vertical-align: middle; margin-right: 10px;"/>
+    Consolas Nintendo
+   </h2>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Nintendo Wii
+     </h3>
+     <p>
+      Revolucionó el juego con sensores de movimiento. Familiar y divertido.
+     </p>
+     <p class="price">
+      Nueva: $249 | Usada: $179
+     </p>
+    </div>
+    <img alt="Wii" src="https://i.blogs.es/cdf3f6/31355104-2-300-overview-1/450_1000.gif"/>
+   </div>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Nintendo Wii U
+     </h3>
+     <p>
+      Incluye mando-tableta. Compatible con juegos de Wii.
+     </p>
+     <p class="price">
+      Nueva: $299 | Usada: $229
+     </p>
+    </div>
+    <img alt="Wii U" src="https://images-cdn.ubuy.ec/659dd16c9aa0f7331e0d4b27-nintendo-wii-u-8gb-handheld-system.jpg"/>
+   </div>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Nintendo Switch
+     </h3>
+     <p>
+      Modo portátil o consola. Compatible con multijugador local y en línea.
+     </p>
+     <p class="price">
+      Nueva: $399 | Usada: $319
+     </p>
+    </div>
+    <img alt="Switch" src="https://assets.nintendo.eu/image/upload/f_auto/q_auto/v1617275520/MNS/Content%20Pages%20Assets/Category-List%20Pages/Consoles/Nintendo%20Switch%20Hub/2000x1125_Consoles_Switch_Flagship_BeautyShot.jpg"/>
+   </div>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Nintendo Switch OLED
+     </h3>
+     <p>
+      Pantalla OLED mejorada y más vibrante. Ideal para juegos en movimiento.
+     </p>
+     <p class="price">
+      Nueva: $499 | Usada: $449
+     </p>
+    </div>
+    <img alt="Switch OLED" src="https://mobilestore.ec/wp-content/uploads/2021/11/Nintendo-Switch-Oled-Blanco-Mobile-Store-Ecuador.jpg"/>
+   </div>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      New Nintendo 3DS XL
+     </h3>
+     <p>
+      Consola portátil con gráficos en 3D sin gafas. Catálogo amplio y diverso.
+     </p>
+     <p class="price">
+      Nueva: $289 | Usada: $219
+     </p>
+    </div>
+    <img alt="3DS XL" src="https://www.nintendo.com/eu/media/images/10_share_images/systems_11/new_nintendo_3ds_17/H2x1_generic_N3DSXL.jpg"/>
+   </div>
+  </section>
+  <section>
+   <h2 class="section-title" style="color: #8e44ad; border-bottom: 3px solid #8e44ad; padding-bottom: 5px;">
+    <img src="https://cdn-icons-png.flaticon.com/512/3169/3169374.png" style="height: 30px; vertical-align: middle; margin-right: 10px;"/>
+    Accesorios y Juegos
+   </h2>
+   <!-- Accesorios -->
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Control DualSense PS5
+     </h3>
+     <p>
+      Control inalámbrico con retroalimentación háptica y gatillos adaptativos.
+     </p>
+     <p class="price">
+      $79
+     </p>
+    </div>
+    <img alt="DualSense" src="https://ecsonyb2c.vtexassets.com/arquivos/ids/244234/PS5_DS_Pshot_A.jpg?v=637365582088830000"/>
+   </div>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Cable HDMI 4K para PS/Xbox
+     </h3>
+     <p>
+      Alta velocidad, compatible con todas las consolas modernas.
+     </p>
+     <p class="price">
+      $15
+     </p>
+    </div>
+    <img alt="HDMI" src="https://web-pro-resources.s3.us-east-2.amazonaws.com/public/original-resources/product/9b789993-7953-47fd-8d58-cde75f3ec331/image/cable-hdmi-4k-tejido-3m-gris.jpg"/>
+   </div>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Memoria MicroSD 128GB Nintendo Switch
+     </h3>
+     <p>
+      Expande tu almacenamiento y guarda más juegos.
+     </p>
+     <p class="price">
+      $35
+     </p>
+    </div>
+    <img alt="microSD" src="https://www.ubuy.ec/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNTFMZXg0UXBmVUwuX1NTNDAwXy5qcGc.jpg"/>
+   </div>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Estuche rígido para Nintendo Switch
+     </h3>
+     <p>
+      Protege tu consola mientras viajas.
+     </p>
+     <p class="price">
+      $25
+     </p>
+    </div>
+    <img alt="Case Switch" src="https://www.tecnotrade.com.ec/wp-content/uploads/2019/05/case_insignia_nintendo_switch.png"/>
+   </div>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Kit de carga Xbox One/Series
+     </h3>
+     <p>
+      Incluye cable USB-C y batería recargable oficial.
+     </p>
+     <p class="price">
+      $29
+     </p>
+    </div>
+    <img alt="Kit Xbox" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU23bu7qh2uO9k5U4sqLtgnj3b7Xc77JXfDQ&amp;s"/>
+   </div>
+   <!-- Juegos -->
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      The Last of Us Part II - PS4
+     </h3>
+     <p>
+      Intensa historia de supervivencia y emociones fuertes.
+     </p>
+     <p class="price">
+      $45
+     </p>
+    </div>
+    <img alt="TLOU2" src="https://ndstore.ec/files/images/productos/1690992673-the-last-of-us-parte-ii-ps4-0.webp"/>
+   </div>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Mario Kart 8 Deluxe - Nintendo Switch
+     </h3>
+     <p>
+      Diviértete con carreras, ítems y multijugador en línea.
+     </p>
+     <p class="price">
+      $59
+     </p>
+    </div>
+    <img alt="Mario Kart" src="https://www.megamaxi.com/wp-content/uploads/2024/12/items2Figm2F1000x10002F45496590475-1-4.jpg"/>
+   </div>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Halo Infinite - Xbox Series
+     </h3>
+     <p>
+      El Jefe Maestro regresa para salvar a la humanidad.
+     </p>
+     <p class="price">
+      $55
+     </p>
+    </div>
+    <img alt="Halo" src="https://i5.walmartimages.com/asr/5c398899-887a-44d2-ae4a-24e76b15b4c5.5d41d7c989d189441faf6d696dc70559.jpeg"/>
+   </div>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Spider-Man Miles Morales - PS5
+     </h3>
+     <p>
+      Vive una aventura urbana como el nuevo Spider-Man.
+     </p>
+     <p class="price">
+      $49
+     </p>
+    </div>
+    <img alt="Spiderman" src="https://www.artefacta.com/media/catalog/product/1/3/134231.png?optimize=medium&amp;bg-color=255,255,255&amp;fit=bounds&amp;height=1040&amp;width=1040&amp;canvas=1040:1040&amp;format=jpeg"/>
+   </div>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Zelda: Breath of the Wild - Switch
+     </h3>
+     <p>
+      Explora Hyrule con libertad absoluta y aventuras épicas.
+     </p>
+     <p class="price">
+      $59
+     </p>
+    </div>
+    <img alt="Zelda" src="https://www.artefacta.com/media/catalog/product/1/3/135989_psoqqpnyp247kbgq.jpg?optimize=medium&amp;bg-color=255,255,255&amp;fit=bounds&amp;height=1040&amp;width=1040&amp;canvas=1040:1040"/>
+   </div>
+   <!-- Juegos adicionales -->
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      FIFA 23 - PS5
+     </h3>
+     <p>
+      Simulación futbolística realista con modo Carrera y Ultimate Team.
+     </p>
+     <p class="price">
+      $59
+     </p>
+    </div>
+    <img alt="FIFA 23" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRYGY0s27OjUVQ2CPNG9cWVkisuwlQyTapMw&amp;s"/>
+   </div>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Gears 5 - Xbox
+     </h3>
+     <p>
+      Acción táctica y narrativa impactante.
+     </p>
+     <p class="price">
+      $39
+     </p>
+    </div>
+    <img alt="Gears 5" src="https://target.scene7.com/is/image/Target/GUEST_f0e678f6-4c17-410e-84f7-9bc127fd83dd?wid=800&amp;hei=800&amp;qlt=80&amp;fmt=webp"/>
+   </div>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Animal Crossing: New Horizons
+     </h3>
+     <p>
+      Crea tu isla ideal y vive con tus vecinos animales.
+     </p>
+     <p class="price">
+      $55
+     </p>
+    </div>
+    <img alt="Animal Crossing" src="https://i5.walmartimages.com/seo/Animal-Crossing-New-Horizons-Nintendo-Switch-Physical-U-S-Version_b82d810e-20d3-49c1-ad56-2dacfbde07f4.4a375fbf0855c1f36093f76d11d4dbe5.jpeg"/>
+   </div>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Gran Turismo 7 - PS5
+     </h3>
+     <p>
+      Simulación de carreras con detalles realistas.
+     </p>
+     <p class="price">
+      $59
+     </p>
+    </div>
+    <img alt="GT7" src="https://www.aki.com.ec/wp-content/uploads/2024/12/items2Figm2F1000x10002F711719541400-1.jpg"/>
+   </div>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Forza Horizon 5 - Xbox
+     </h3>
+     <p>
+      Explora México en autos de lujo a máxima velocidad.
+     </p>
+     <p class="price">
+      $65
+     </p>
+    </div>
+    <img alt="Forza" src="https://juegodigitalecuador.com/files/images/productos/1658270695-forza-horizon-5-xbox-series-xs-0.jpg"/>
+   </div>
+   <div class="product">
+    <div class="product-info">
+     <h3>
+      Pokémon Legends: Arceus - Switch
+     </h3>
+     <p>
+      Viaja al pasado y descubre los orígenes de Sinnoh.
+     </p>
+     <p class="price">
+      $59
+     </p>
+    </div>
+    <img alt="Pokemon Arceus" src="https://m.media-amazon.com/images/I/71bhNf8QiOS._SL1500_.jpg"/>
+   </div>
+  </section>
+  <footer>
+   <p>
+    © 2025 KEFEMA Games Store. Todos los derechos reservados.
+   </p>
+  </footer>
+  <section>
+   <h2 class="section-title">
+    <img src="https://w7.pngwing.com/pngs/732/601/png-transparent-computer-icons-android-google-contacts-contact-rectangle-black-mobile-phones-thumbnail.png" style="height: 30px; vertical-align: middle; margin-right: 10px;"/>
+    Contacto
+   </h2>
+   <div class="intro">
+    <p>
+     <img src="https://static.vecteezy.com/system/resources/previews/018/930/690/non_2x/whatsapp-logo-whatsapp-icon-whatsapp-transparent-free-png.png" style="height: 18px; vertical-align: middle; margin-right: 6px;"/>
+     <strong>
+      WhatsApp:
+     </strong>
+    </p>
+    <p>
+     <img src="https://img.freepik.com/vector-premium/icono-logotipo-vector-instagram-logotipo-redes-sociales_901408-392.jpg?semt=ais_hybrid&amp;w=740" style="height: 18px; vertical-align: middle; margin-right: 6px;"/>
+     <strong>
+      Instagram:
+     </strong>
+    </p>
+    <p>
+     <img src="https://cdn-icons-png.flaticon.com/512/6244/6244710.png" style="height: 18px; vertical-align: middle; margin-right: 6px;"/>
+     <strong>
+      Correo electrónico:
+     </strong>
+    </p>
+    <p>
+     <img src="https://w7.pngwing.com/pngs/595/737/png-transparent-computer-icons-address-book-address-thumbnail.png" style="height: 18px; vertical-align: middle; margin-right: 6px;"/>
+     <strong>
+      Dirección:
+     </strong>
+    </p>
+    <p>
+     <img src="https://w7.pngwing.com/pngs/269/36/png-transparent-computer-icons-symbol-alarm-clocks-schedule-miscellaneous-text-logo.png" style="height: 18px; vertical-align: middle; margin-right: 6px;"/>
+     <strong>
+      Horario de atención:
+     </strong>
+     Lunes a sábado, de 9h00 a 18h00
+    </p>
+   </div>
+  </section>
+ </body>
+</html>
